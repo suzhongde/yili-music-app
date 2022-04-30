@@ -22,7 +22,7 @@ class NotificationArea extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: primary,
                 borderRadius:
-                BorderRadius.only(bottomRight: Radius.circular(100))),
+                    BorderRadius.only(bottomRight: Radius.circular(100))),
             child: Container(
                 padding: const EdgeInsets.only(
                     top: 19, bottom: 19, right: 25, left: 25),
@@ -60,9 +60,11 @@ class NotificationArea extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/login');
+                                },
                                 icon:
-                                SvgPicture.asset('assets/icons/bell.svg')),
+                                    SvgPicture.asset('assets/icons/bell.svg')),
                             const SizedBox(
                               width: 18,
                             ),
